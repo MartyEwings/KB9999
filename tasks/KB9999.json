@@ -1,7 +1,15 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "A short description of this task",
+  "description": "This Task is to be used with KB9999",
   "parameters": {
-  }
+  "Xmx": {
+           "description": "Puppetdb Xmx Setting",
+	            "type": "Integer"
+		    },
+ "Xms": {
+          "description": "Puppetdb Xms Setting",
+	           "type": "Integer"
+		   },
+ }
 }
