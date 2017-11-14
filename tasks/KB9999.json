@@ -3,13 +3,13 @@
   "supports_noop": false,
   "description": "This Task is to be used with KB9999",
   "parameters": {
-  "Xmx": {
+  "xmx": {
            "description": "Puppetdb Xmx Setting",
 	            "type": "Integer"
 		    },
- "Xms": {
+ "xms": {
           "description": "Puppetdb Xms Setting",
 	           "type": "Integer"
-		   },
+		   }
  }
 }
