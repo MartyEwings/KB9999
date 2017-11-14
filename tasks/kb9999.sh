@@ -9,8 +9,8 @@ then
  echo "-PuppetDb node detected "   #Log Line to StdOut for the Console
  echo "-PuppetDb node detected "   >> /var/log/puppetlabs/KbTask.log # Log Line for persistant log fike
  puppet resource service puppet ensure=stopped >> /var/log/puppetlabs/KbTask.log
- $(/usr/bin/which sed) -i 's/\(JAVA_ARGS="-Xmx\).*\(m -Xms.*\)/\1'$PT_Xmx'\2/g' /etc/sysconfig/pe-puppetdb
- $(/usr/bin/which sed) -i 's/\(-Xms\).*\(m -XX.*\)/\1'$PT_Xms'\2/g' /etc/sysconfig/pe-puppetdb
+ $(/usr/bin/which sed) -i 's/\(JAVA_ARGS="-Xmx\).*\(m -Xms.*\)/\1'$PT_xmx'\2/g' /etc/sysconfig/pe-puppetdb
+ $(/usr/bin/which sed) -i 's/\(-Xms\).*\(m -XX.*\)/\1'$PT_xms'\2/g' /etc/sysconfig/pe-puppetdb
  puppet resource service pe-puppetdb ensure=stopped >> /var/log/puppetlabs/KbTask.log
  puppet resource service pe-puppetdb ensure=running >> /var/log/puppetlabs/KbTask.log
 
